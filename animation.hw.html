@@ -1,0 +1,31 @@
+var fillG = 100;
+var xPos = 20;
+var yPos = 20;
+var xStep = 30;
+var yStep = 30;
+var gStep = 20;
+
+function setup() {
+  createCanvas(400, 400);
+
+}
+
+function draw() {
+  background(10, 0, 50);
+  console.log(frameCount);
+  for (var i = 0; i < 10; i++){
+    fill(300, fillG + (gStep * i), 150);
+    rect(frameCount + (xStep * i), yPos + (frameCount * i), 50, 50);
+  }
+
+    for (var i = 0; i < 10; i++){
+    fill(100, fillG + 70 + (gStep * i), 140);
+    rect(frameCount + 100 + (xStep * i), yPos + 80 + (frameCount * i), 50, 50);
+  }
+  for (var i = 0; i < 10; i++){
+    fill(50, fillG + (gStep * i), 145);
+    rect(frameCount + 180 + (xStep * i), yPos + 120 + (frameCount * i), 50, 50);
+  }
+}
+
+  
