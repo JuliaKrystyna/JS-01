@@ -1,0 +1,33 @@
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(50);
+  stroke(255);
+  strokeWeight(8);
+  noFill();
+  if (mouseIsPressed) {
+    line(110, 150, 160, 150);
+    line(220, 150, 270, 150);
+    rect(100, 250, 200, 50);
+  } else {
+    //if mouse goes over the left eye, it blinks
+    if (mouseX >= 124 && mouseX <= 172 && mouseY >= 126 && mouseY <= 171) {
+      line(110, 150, 160, 150);
+      ellipse(250, 150, 40, 40);
+      line(100, 275, 300, 275);
+    //if mouse goes over the right eye, it blinks
+    } else if (mouseX >= 224 && mouseX <= 274 && mouseY >= 126 && mouseY <= 171) {
+      ellipse(150, 150, 40, 40);
+      line(250, 150, 290, 150);
+      line(100, 275, 300, 275);
+    //otherwise, face remains at rest
+    } else {
+      ellipse(150, 150, 40, 40);
+      ellipse(250, 150, 40, 40);
+      line(100, 275, 300, 275);
+    }
+  }
+  console.log(mouseX + ", " + mouseY);
+}
