@@ -21,11 +21,11 @@
     const name = $("input#StudentName").val();
     const Temp = $("input#Temperature").val()
     if (Temp < 98) {
-    	$("#healthy").append(name)
+    	$("#healthy").append(name + "<br>")
     }
     if (Temp > 98) {
-    	$("#unhealthy").append(name)
-    } 
+    	$("#unhealthy").append(name + "<br>")
+    }
 });
 	</script>
 </body>
