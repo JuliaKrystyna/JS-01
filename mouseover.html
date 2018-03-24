@@ -1,0 +1,31 @@
+<html>
+<body>
+function setup() {
+  createCanvas(600, 400);
+}
+
+function draw() {
+  background(0);
+  strokeWeight(4);
+  stroke(255);
+
+  /*
+
+  // create a grid of circles that fills the top of the page
+  for (var x = 0; x <= width / 2; x += 50) {
+    for (var y = 0; y <= height / 2; y += 50) {
+      fill(0, 91, 239);
+      ellipse(x, y, 25, 25);
+    }
+  }
+*/
+
+  // create a grid of circles that moves with your cursor
+  for (var x = 0; x <= mouseX; x += 50) {
+    for (var y = 0; y <= mouseY; y += 50) {
+      fill(0, 91, 239);
+      ellipse(x, y, 25, 25);
+    }
+  }
+</body>
+</html>

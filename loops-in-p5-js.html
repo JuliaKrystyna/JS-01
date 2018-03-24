@@ -1,0 +1,22 @@
+<html>
+<body>
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(0, 255, 8);
+  noStroke();
+  fill(255);
+  /*
+  Do now:
+  Consolidate the below lines of code into
+  one for loop
+  */
+	for(var i = 0; i<=360; i +=40){
+		rect(i, i, width/10, height/10);
+
+	}
+}
+</body>
+</html>
